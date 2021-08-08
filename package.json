@@ -2,13 +2,20 @@
   "name": "ra-6.1",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "analog-clock": "^1.0.0",
+    "moment-timezone": "^0.5.33",
     "react": "^17.0.2",
+    "react-analog-clock": "^2.1.0",
+    "react-analogue-clock": "^0.3.2",
+    "react-clock": "^3.0.0",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.3.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

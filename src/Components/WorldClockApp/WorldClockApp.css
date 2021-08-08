@@ -1,0 +1,65 @@
+.WorldClockApp {
+    display: flex;
+    flex-direction: column;
+}
+
+.WorldClockForm {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 30px;
+}
+
+.inputBlock:nth-child(n+2) {
+    margin-left: 30px;
+}
+
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.formButton {
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.inputForm {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.wrapperClock {
+    display: flex;
+}
+
+.deleteClockButton {
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 0.5rem;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+
+.ClockList {
+    margin-top: 30px;
+}
+
+.ClockComponent {
+    list-style: none;
+    display: inline-block;
+}
+
+.ClockComponent:nth-child(n + 2) {
+    margin-left: 30px;
+}
+
+.clockComponentBody {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.clockText {
+    text-align: center;
+    margin-right: 20px;
+}
