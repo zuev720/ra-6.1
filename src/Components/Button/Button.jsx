@@ -3,9 +3,9 @@ import React from 'react';
 export class Button extends React.Component {
     render() {
         return (
-        <button className={this.props.className} type={this.props.value} onClick={this.props.onDeleteClock}>
-            {this.props.children}
-        </button>
+            <button id={this.props.id} className={this.props.className} type={this.props.type} onClick={this.props.click}>
+                {this.props.children}
+            </button>
         )
     }
 }

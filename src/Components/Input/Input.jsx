@@ -7,7 +7,7 @@ export class Input extends React.Component {
             type="text"
             className={'inputForm'}
             name={this.props.name}
-            value={this.props.state[this.props.name]}
+            value={this.props.value}
             onChange={this.props.handleChange}
             pattern={this.props.pattern}
             required={true}

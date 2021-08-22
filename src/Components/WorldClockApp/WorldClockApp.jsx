@@ -30,7 +30,7 @@ export class WorldClockApp extends React.Component {
     }
 
     onDeleteClock(e) {
-        const townName = e.target.closest('.clockComponentBody').previousSibling.textContent;
+        const townName = e.target.id;
         const arrayClocks = this.state.timeObjects.filter((elem) => elem.name !== townName);
         this.setState({timeObjects: arrayClocks});
     }
@@ -41,13 +41,13 @@ export class WorldClockApp extends React.Component {
                 <form className={'WorldClockForm'} onSubmit={this.handleFormSubmit}>
                     <div className={'inputBlock'}>
                         <Label id={'name'} text={'Название'}/>
-                        <Input name={'name'} handleChange={this.handleChange} state={this.state} pattern={'^[A-Za-zА-Яа-яЁё ]+$'}/>
+                        <Input name={'name'} handleChange={this.handleChange} value={this.state.name} pattern={'^[A-Za-zА-Яа-яЁё ]+$'}/>
                     </div>
                     <div className={'inputBlock'}>
                         <Label id={'timeZone'} text={'Временная зона'}/>
-                        <Input name={'timeZone'} handleChange={this.handleChange} state={this.state} pattern={'^[ 0-9]+$'}/>
+                        <Input name={'timeZone'} handleChange={this.handleChange} value={this.state.timeZone} pattern={'^[ 0-9]+$'}/>
                     </div>
-                    <Button className={'formButton'} value={'submit'}>Добавить</Button>
+                    <Button className={'formButton'} type={'submit'}>Добавить</Button>
                 </form>
                 <ul className={'ClockList'}>
                     {this.state.timeObjects.map((elem, index) =>
@@ -55,7 +55,7 @@ export class WorldClockApp extends React.Component {
                             key={index}
                             size={'120px'}
                             userOffset={elem.timeZone}
-                            text={elem.name}
+                            name={elem.name}
                             onDeleteClock={this.onDeleteClock}
                         />
                     )}
